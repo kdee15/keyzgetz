@@ -17,17 +17,17 @@ export async function getStaticProps() {
 
     .then((entries) => entries.items);
 
-  const resServices = await client.getEntries({
-    content_type: "componentServiceCard",
-  });
+  // const resServices = await client.getEntries({
+  //   content_type: "componentServiceCard",
+  // });
 
   return {
     props: {
       Page: resPage,
       heroBanner: resPage[0].fields.components[0].fields,
-      profileKurt: resPage[0].fields.components[2].fields,
-      profileCompany: resPage[0].fields.components[3].fields,
-      servicesList: resServices,
+      // profileKurt: resPage[0].fields.components[2].fields,
+      // profileCompany: resPage[0].fields.components[3].fields,
+      // servicesList: resServices,
     },
     revalidate: 1,
   };
@@ -36,18 +36,18 @@ export async function getStaticProps() {
 export default function Recipes({
   Page,
   heroBanner,
-  servicesList,
-  profileKurt,
-  profileCompany,
+  // servicesList,
+  // profileKurt,
+  // profileCompany,
 }) {
-  const Services = servicesList.items;
+  // const Services = servicesList.items;
   console.log("Page", Page);
   return (
     <div>
       <ComponentHeroBanner heroBanner={heroBanner} />
-      <ComponentServiceCard servicesList={servicesList} />
+      {/* <ComponentServiceCard servicesList={servicesList} />
       <ComponentProfile data={profileKurt} />
-      <ComponentProfile data={profileCompany} />
+      <ComponentProfile data={profileCompany} /> */}
     </div>
   );
 }
