@@ -3,32 +3,43 @@
 
 .oHeroBlock {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-  .oContentRow {
-    min-height: 100vh;
-    @include aspect-ratio(auto, 56.5%);
-  }
-  .oContentBlock {
-    align-self: center;
-    .mImage {
-      max-width: 50%;
-      margin: 0 0 0 auto;
+  &.oHome {
+    .mLogo {
+      width: 80%;
+      max-width: 400px;
+      margin: 10vh auto 15vh;
     }
-    .aImage {
-      margin: 0 0 50px auto;
-      display: block;
-    }
-    .aText {
-      text-align: center;
+
+    .introImage {
+      padding: 0 50px;
     }
   }
 
-  .dog-turd {
-    p {
-      color: red !important;
+  &.oPage {
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+    .oContentBlock {
+      position: relative;
+      padding: 100px 0;
+      z-index: 10;
+      .aTitle {
+        display: block;
+        text-shadow: 0 0 15px black;
+      }
+    }
+    .mLogo {
+      width: 10%;
+      max-width: 400px;
+      margin: 10vh auto 15vh;
+    }
+
+    .introImage {
+      padding: 0;
+    }
+    .introImage {
+      @include position(absolute, 0);
     }
   }
 
@@ -39,22 +50,13 @@
   @media ($md-dn) {
   }
 
-  @media ($sm-dn) {
-  }
-
   // B. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
-  @media ($sm-up) {
-    .oContentBlock {
-      .mImage {
-        max-width: 300px;
-        margin: 0 auto;
-      }
-      .aImage {
-        margin: 20px auto;
-      }
+  @media ($md-up) {
+    .mLogo {
+      margin: 25vh auto 15vh;
     }
   }
 
@@ -62,14 +64,14 @@
 
   // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
 
-  @media ($md-up) {
+  @media ($lg-up) {
   }
 
   // D. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
-  @media ($lg-up) {
+  @media ($xl-up) {
   }
 
   // E. END +++++++++++++++++++++++++++++++++++++++++++++++

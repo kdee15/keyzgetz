@@ -1,41 +1,82 @@
-import { createClient } from "contentful";
+import React from "react";
+import { isMobile } from "react-device-detect";
 import classes from "./ComponentHeroBanner.module.scss";
 import Image from "next/image";
-import React from "react";
-import ReactMarkdown from "react-markdown";
+import { useState, useEffect } from "react";
 
 function ComponentHeroBanner({ heroBanner }) {
-  const { description, image, backgroundImage, theme } = heroBanner;
+  const [mobileView, setMobileView] = useState();
+  const {
+    title,
+    backgroundImage,
+    backgroundImageMobile,
+    logo,
+    textAlign,
+    homepage,
+  } = heroBanner;
+
+  useEffect(() => {
+    setMobileView(isMobile);
+  }, []);
+
   return (
     <section
-      className={`${classes.oHeroBlock} hero__${theme}`}
-      style={{
-        backgroundImage: `url(http:${backgroundImage.fields.file.url})`,
-      }}
+      className={`${classes.oHeroBlock} ${
+        homepage ? classes.oHome : classes.oPage
+      }`}
     >
-      <div className={`container`}>
-        <div className={`${classes.oContentRow} row`}>
-          <div
-            className={`${classes.oContentBlock} col-12 col-md-6 offset-md-6 col-12 col-lg-7 offset-lg-5`}
-          >
-            <figure className={classes.mImage}>
-              <Image
-                className={`${classes.aImage} a-responsive-image`}
-                src={image.fields.file.url}
-                alt={`title`}
-                width={image.fields.file.details.image.width}
-                height={image.fields.file.details.image.height}
-                aria-hidden="true"
-                layout="responsive"
-                priority="true"
-              />
-            </figure>
-            <ReactMarkdown className={`${classes.aText} a-fnt-18f`}>
-              {description}
-            </ReactMarkdown>
+      <div
+        className={`${classes.oContentBlock}`}
+        style={{
+          textAlign: `${textAlign}`,
+        }}
+      >
+        {homepage ? (
+          <figure className={classes.mLogo}>
+            <Image
+              className={`${classes.aImage} a-responsive-image`}
+              src={logo.fields.file.url}
+              alt={`title`}
+              width={logo.fields.file.details.image.width}
+              height={logo.fields.file.details.image.height}
+              aria-hidden="true"
+              layout="responsive"
+              priority="true"
+            />
+          </figure>
+        ) : (
+          <div className={`container`}>
+            <div className={`row`}>
+              <h1 className={`${classes.aTitle} fntH1 col-12`}>{title}</h1>
+            </div>
           </div>
-        </div>
+        )}
       </div>
+      <figure className={classes.introImage}>
+        {mobileView ? (
+          <Image
+            className={classes.oImageBlockMobile}
+            src={backgroundImageMobile.fields.file.url}
+            alt={`title`}
+            width={backgroundImageMobile.fields.file.details.image.width}
+            height={backgroundImageMobile.fields.file.details.image.height}
+            aria-hidden="true"
+            layout="responsive"
+            priority="true"
+          />
+        ) : (
+          <Image
+            className={classes.oImageBlock}
+            src={backgroundImage.fields.file.url}
+            alt={`title`}
+            width={backgroundImage.fields.file.details.image.width}
+            height={backgroundImage.fields.file.details.image.height}
+            aria-hidden="true"
+            layout="responsive"
+            priority="true"
+          />
+        )}
+      </figure>
     </section>
   );
 }

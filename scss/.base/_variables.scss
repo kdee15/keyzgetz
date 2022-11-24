@@ -4,56 +4,41 @@
 
 // A.1. BREAKPOINTS ---------------------------------------
 
-// from 450px down
-$ss-dn: "max-width:450px";
-
 // from 575px down
 $xs-dn: "max-width:575px";
 
 // from 576px up
-$xs-up: "min-width:576px";
+$sm-up: "min-width:576px";
 
 // from 767px down
-$sm-dn: "max-width:767px";
+$md-dn: "max-width:767px";
 
 // from 768px up
-$sm-up: "min-width:768px";
+$md-up: "min-width:768px";
 
 // from 991px down
-$md-dn: "max-width:991px";
+$lg-dn: "max-width:991px";
 
 // from 992px up
-$md-up: "min-width:992px";
-
-// from 1023px down
-$mdl-dn: "max-width:1023px";
-
-// from 1024px
-$mdl-up: "min-width:1024px";
+$lg-up: "min-width:992px";
 
 // from 1199px down
-$lg-dn: "max-width:1199px";
+$xl-dn: "max-width:1199px";
 
 // from 1200px up
-$lg-up: "min-width:1200px";
+$xl-up: "min-width:1200px";
 
-// from 1439px down
-$xlg-dn: "max-width:1439px";
+// from 1399px down
+$xxl-dn: "min-width:1399px";
 
-// from 1440px up
-$xlg-up: "min-width:1440px";
+// from 1400px up
+$xxl-up: "min-width:1400px";
 
 // from 1919px down
 $hd-dn: "min-width:1919px";
 
 // from 1920px up
 $hd-up: "min-width:1920px";
-
-// from 2559px down
-$uhd-dn: "min-width:2559px";
-
-// from 2560px up
-$uhd-up: "min-width:2560px";
 
 // A.1. END -----------------------------------------------
 
@@ -76,23 +61,20 @@ $base-xs: 4px;
 
 // C. COLORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-$grey: #cecccc;
-$grey-lt: #fdecef;
-$grey-drk: #0f110c;
-$mauve: #9d6381;
-$mauve-drk: #612940;
-
 $black: #000000;
 $grey-02: #2d2323;
+$grey: #4d4d4d;
 $white: #ffffff;
 $white-03: rgba(244, 247, 251, 0.3);
 
 // C.2. SITE COLOR CONFIG ---------------------------------
 
-$base-color: #0f110c;
-$default: #612940;
-$purple: #9d6381;
-$green: #4e5616;
+$default: #715e4e;
+$mint: #e0ead6;
+$greenD: #1e5c44;
+$greenL: #84a975;
+$slate: #f9efdc;
+$pink: #e4aca0;
 
 // C.2. END -----------------------------------------------
 
