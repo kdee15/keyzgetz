@@ -1,14 +1,10 @@
 import { createClient } from "contentful";
-import { useState, useEffect } from "react";
 import Component2ColumnImageText from "../components/blocks/component2ColumnImageText/Component2ColumnImageText";
-import Footer from "../components/blocks/componentFooter/ComponentFooter";
 import ComponentHeroCarousel from "../components/blocks/componentHeroCarousel/ComponentHeroCarousel";
 import ComponentReasons from "../components/blocks/componentReasons/ComponentReasons";
 import Nav from "../components/molecules/nav/Nav";
 import Component3Column from "../components/organisms/component3Column/Component3Column";
 import ComponentCardList from "../components/organisms/componentCardList/ComponentCardList";
-import FounderProfile from "../components/organisms/founderProfile/FounderProfile";
-import ServiceComponent from "../components/organisms/serviceComponent/ServiceComponent";
 const { C_SPACE_ID, C_DELIVERY_KEY } = require("../helpers/contentful-config");
 
 export async function getStaticProps() {
