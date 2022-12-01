@@ -2,20 +2,52 @@
 
 @import "scss/.base/module-index";
 
-.o3ColumnBlock {
+.oCard {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0;
-  margin-bottom: 100px;
+  padding: 50px 0 0;
   position: relative;
 
-  .aBlockTitle {
-    padding: 80px 30px 0;
+  .oCardImage {
+    aspect-ratio: 4/3;
     position: relative;
-    z-index: 1;
-    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 40px;
+    width: 60%;
   }
 
+  .oCardBody {
+    margin-left: 50%;
+    width: 50%;
+    z-index: 10;
+    @include vertical-align(absolute);
+    background-color: white;
+    padding: 50px;
+  }
+
+  .aTitle {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .mText {
+    text-align: center;
+    ul {
+      text-align: left;
+    }
+    p {
+      margin-bottom: 6px;
+    }
+  }
+
+  &:nth-child(even) {
+    .oCardImage {
+      margin-left: 40%;
+    }
+    .oCardBody {
+      margin-left: 0;
+    }
+  }
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
@@ -28,9 +60,6 @@
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
   @media ($md-up) {
-    .aBlockTitle {
-      margin: 0 0 0 auto;
-    }
   }
 
   // C. END +++++++++++++++++++++++++++++++++++++++++++++++

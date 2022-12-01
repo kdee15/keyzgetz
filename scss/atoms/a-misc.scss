@@ -8,7 +8,7 @@ h1,
 h1 *,
 .fntH1,
 .fntH1 * {
-  font-family: $alex;
+  font-family: $heading;
   @include fntH1();
 }
 
@@ -16,7 +16,7 @@ h2,
 h2 *,
 .fntH2,
 .fntH2 * {
-  font-family: $alex;
+  font-family: $heading;
   @include fntH2();
 }
 
@@ -24,7 +24,7 @@ h3,
 h3 *,
 .fntH3,
 .fntH3 * {
-  font-family: $cormorant;
+  font-family: $heading;
   @include fntH3();
 }
 
@@ -32,7 +32,7 @@ h4,
 h4 *,
 .fntH4,
 .fntH4 * {
-  font-family: $cormorant;
+  font-family: $heading;
   @include fntH4();
 }
 
@@ -57,7 +57,8 @@ h4 *,
 }
 
 p {
-  @include font(16);
+  @include font(18);
+  letter-spacing: 1px;
 }
 
 // A.1. END -----------------------------------------------
