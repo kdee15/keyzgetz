@@ -1,5 +1,5 @@
 import classes from "./ComponentCardList.module.scss";
-import ComponentTitleImageTextCard from "../componentTitleImageTextCard/ComponentTitleImageTextCard";
+import ComponentTwoColumnCard from "../componentTwoColumnCard/ComponentTwoColumnCard";
 
 function ComponentCardList({ contentModule }) {
   const { title, cardList } = contentModule;
@@ -10,7 +10,7 @@ function ComponentCardList({ contentModule }) {
       <div className={`${classes.oContainer} container`}>
         <div className={`${classes.oRow} row`}>
           {cardList.map((item, index) => (
-            <ComponentTitleImageTextCard item={item} key={index} />
+            <ComponentTwoColumnCard item={item} key={index} />
           ))}
         </div>
       </div>

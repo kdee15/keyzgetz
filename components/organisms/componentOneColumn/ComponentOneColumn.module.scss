@@ -1,19 +1,23 @@
-// COMPONENT [ TEXT IMAGE BLOCK ] #####################################################################################
-
+// COMPONENT [ HERO BLOCK ] ###########################################################################################
 @import "scss/.base/module-index";
 
-.o3ColumnBlock {
+.oOneColumn {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0;
-  margin-bottom: 100px;
   position: relative;
+  padding: 100px 0;
 
-  .aBlockTitle {
-    padding: 80px 30px 0;
-    position: relative;
-    z-index: 1;
-    text-align: center;
+  .oImage {
+    @include position(absolute, 0);
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .oBlockBody {
+    padding: 50px;
+    background-color: white;
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
@@ -28,23 +32,20 @@
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
   @media ($md-up) {
-    .aBlockTitle {
-      margin: 0 0 0 auto;
-    }
   }
 
   // C. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
 
-  @media ($md-up) {
+  @media ($lg-up) {
   }
 
   // D. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
-  @media ($lg-up) {
+  @media ($xl-up) {
   }
 
   // E. END +++++++++++++++++++++++++++++++++++++++++++++++
