@@ -16,8 +16,11 @@
   }
 
   .oBlockBody {
-    padding: 50px;
-    background-color: white;
+    padding: 0 30px;
+    .blockWrapper {
+      padding: 30px;
+      background-color: rgba(white, 0.9);
+    }
   }
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
@@ -32,6 +35,12 @@
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
   @media ($md-up) {
+    .oBlockBody {
+      padding: 0;
+      .blockWrapper {
+        padding: 50px;
+      }
+    }
   }
 
   // C. END +++++++++++++++++++++++++++++++++++++++++++++++

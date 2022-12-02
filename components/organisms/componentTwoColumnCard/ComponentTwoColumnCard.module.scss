@@ -5,25 +5,20 @@
 .oCard {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0 0;
   position: relative;
+  padding: 0;
 
   .oCardImage {
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
     position: relative;
     background-position: center center;
     background-size: cover;
-    margin-bottom: 40px;
-    width: 60%;
+    width: 100%;
   }
 
   .oCardBody {
-    margin-left: 50%;
-    width: 50%;
-    z-index: 10;
-    @include vertical-align(absolute);
     background-color: white;
-    padding: 50px;
+    padding: 30px;
   }
 
   .aTitle {
@@ -40,14 +35,6 @@
     }
   }
 
-  &:nth-child(even) {
-    .oCardImage {
-      margin-left: 40%;
-    }
-    .oCardBody {
-      margin-left: 0;
-    }
-  }
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // B. GRACEFUL DEGRADATION ++++++++++++++++++++++++++++++
@@ -60,6 +47,28 @@
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
   @media ($md-up) {
+    padding: 50px 0 0;
+
+    &:nth-child(even) {
+      .oCardImage {
+        margin-left: 40%;
+      }
+      .oCardBody {
+        margin-left: 0;
+      }
+    }
+
+    .oCardImage {
+      width: 60%;
+      aspect-ratio: 4/3;
+    }
+
+    .oCardBody {
+      @include vertical-align(absolute);
+      margin-left: 50%;
+      width: 50%;
+      padding: 50px;
+    }
   }
 
   // C. END +++++++++++++++++++++++++++++++++++++++++++++++
