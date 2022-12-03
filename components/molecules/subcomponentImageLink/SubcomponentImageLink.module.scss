@@ -2,19 +2,12 @@
 
 @import "scss/.base/module-index";
 
-.o3ColumnBlock {
+.aCarouselImage {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
 
-  padding: 50px 0;
-  position: relative;
-
-  .aBlockTitle {
-    padding: 80px 30px 0;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin-bottom: 50px;
-  }
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -34,14 +27,14 @@
 
   // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
 
-  @media ($lg-up) {
+  @media ($md-up) {
   }
 
   // D. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
-  @media ($xl-up) {
+  @media ($lg-up) {
   }
 
   // E. END +++++++++++++++++++++++++++++++++++++++++++++++
