@@ -1,8 +1,13 @@
-// COMPONENT [ CONTENT BLOCK ] ########################################################################################
-@import "../../../scss/.base/module-index";
+// COMPONENT [ TEXT IMAGE BLOCK ] #####################################################################################
 
-.oContent {
+@import "scss/.base/module-index";
+
+.aCarouselImage {
   // A. GLOBAL STYLES +++++++++++++++++++++++++++++++++++++
+
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1/1;
 
   // A. END +++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -22,14 +27,14 @@
 
   // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
 
-  @media ($lg-up) {
+  @media ($md-up) {
   }
 
   // D. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
-  @media ($xl-up) {
+  @media ($lg-up) {
   }
 
   // E. END +++++++++++++++++++++++++++++++++++++++++++++++

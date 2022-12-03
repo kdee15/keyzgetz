@@ -29,6 +29,11 @@
     text-align: center;
     ul {
       text-align: left;
+      li {
+        p {
+          margin-bottom: 0;
+        }
+      }
     }
     p {
       margin-bottom: 6px;
@@ -47,7 +52,12 @@
   // C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++
 
   @media ($md-up) {
-    padding: 50px 0 0;
+    padding: 0;
+    margin-bottom: 50px;
+
+    .aTitle {
+      margin-bottom: 15px;
+    }
 
     &:nth-child(even) {
       .oCardImage {
@@ -67,7 +77,7 @@
       @include vertical-align(absolute);
       margin-left: 50%;
       width: 50%;
-      padding: 50px;
+      padding: 20px 0;
     }
   }
 
@@ -75,14 +85,31 @@
 
   // D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++
 
-  @media ($md-up) {
+  @media ($lg-up) {
+    .aTitle {
+      margin-bottom: 30px;
+    }
+
+    .oCardBody {
+      padding: 50px;
+    }
+
+    .mText {
+      ul {
+        li {
+          p {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
   }
 
   // D. END +++++++++++++++++++++++++++++++++++++++++++++++
 
   // E. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++
 
-  @media ($lg-up) {
+  @media ($xl-up) {
   }
 
   // E. END +++++++++++++++++++++++++++++++++++++++++++++++

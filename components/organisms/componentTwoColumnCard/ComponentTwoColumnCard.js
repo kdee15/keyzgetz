@@ -16,7 +16,7 @@ function ComponentTwoColumnCard({ item }) {
       ) : null}
       <div className={`${classes.oCardBody}`}>
         <h4 className={`${classes.aTitle}`}>{title}</h4>
-        <div className={`${classes.mText}`}>
+        <div className={`${classes.mText} fnt18`}>
           {documentToReactComponents(description)}
         </div>
       </div>
