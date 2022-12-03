@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import Footer from "../components/blocks/componentFooter/ComponentFooter";
 import ComponentHeroCarousel from "../components/blocks/componentHeroCarousel/ComponentHeroCarousel";
 import Nav from "../components/molecules/nav/Nav";
 import Component3Column from "../components/organisms/component3Column/Component3Column";
@@ -36,7 +37,9 @@ export default function Home({ Page }) {
   const componentAbout = Page[0].fields.components[2].fields;
   const componentServices = Page[0].fields.components[3].fields;
   const componentGallery = Page[0].fields.components[5].fields;
-
+  const componentFooter = Page[0].fields.components[6].fields;
+  const Logo = Page[0].fields.components[0].fields.logo;
+  console.log("LOGO", Logo);
   return (
     <div className="anchor" id="top">
       <Nav />
@@ -47,6 +50,7 @@ export default function Home({ Page }) {
       <div className="anchor" id="tania"></div>
       <ComponentCardList contentModule={componentServices} />
       <ComponentImageGallery contentModule={componentGallery} />
+      <Footer contentModule={componentFooter} image={Logo} />
     </div>
   );
 }

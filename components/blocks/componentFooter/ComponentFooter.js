@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import classes from "./ComponentFooter.module.scss";
 
-function Footer({ contentModule }) {
-  const { image, linkList } = contentModule;
+function Footer({ contentModule, image }) {
+  const { linkList } = contentModule;
   return (
     <footer className={classes.oFooter}>
       <div className={`container`}>
